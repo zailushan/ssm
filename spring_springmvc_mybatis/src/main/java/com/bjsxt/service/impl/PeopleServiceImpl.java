@@ -21,4 +21,13 @@ public class PeopleServiceImpl implements PeopleService {
     public People selectById(int id) {
         return peopleMapper.selectByPrimaryKey(id);
     }
+
+    @Override
+    public void insertPeople() {
+        People people = new People();
+        people.setId(123);
+        people.setAge(20);
+        people.setName("haha1");
+        peopleMapper.insertSelective(people);
+    }
 }

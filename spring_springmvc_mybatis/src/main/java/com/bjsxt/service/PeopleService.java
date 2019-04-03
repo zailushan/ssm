@@ -11,4 +11,6 @@ public interface PeopleService {
 
     People selectById(int id);
 
+    void insertPeople();
+
 }
